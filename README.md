@@ -1,35 +1,54 @@
-<h1 align="center">🤖 WhatsApp Bot con Baileys</h1>
+<div align="center">
 
-<p align="center">
-  <img src="./bot.png" alt="WhatsApp Bot" width="300">
+<h1>🤖 WhatsApp Bot con Baileys</h1>
+
+<img src="./bot.png" alt="WhatsApp Bot" width="280">
+
+<p>
+  Bot de WhatsApp desarrollado en <b>Node.js</b> usando
+  <b>@whiskeysockets/baileys</b>, con conexión mediante
+  <b>código de vinculación de 8 dígitos</b>.
 </p>
 
-<p align="center">
-  Bot de WhatsApp desarrollado en <b>Node.js</b> usando la librería
-  <b>@whiskeysockets/baileys</b>, con vinculación mediante código de 8 dígitos.
+<p>
+  <img src="https://img.shields.io/badge/Node.js-v18+-green">
+  <img src="https://img.shields.io/badge/Baileys-Latest-blue">
+  <img src="https://img.shields.io/badge/Status-Activo-success">
+  <img src="https://img.shields.io/badge/License-Educational-lightgrey">
+</p>
+
+</div>
+
+<hr>
+
+<h2>📖 Descripción</h2>
+<p>
+Este proyecto es un bot de WhatsApp ligero y modular, ideal para
+automatizar respuestas, mostrar menús, crear stickers y gestionar
+comandos personalizados.  
+Compatible con <b>Termux</b>, <b>Linux</b> y <b>Windows</b>.
 </p>
 
 <hr>
 
-<h2>📌 Características</h2>
+<h2>✨ Características</h2>
 <ul>
-  <li>Conexión a WhatsApp con Baileys</li>
-  <li>Vinculación por código de 8 dígitos</li>
-  <li>Soporte para múltiples comandos</li>
-  <li>Estructura modular</li>
-  <li>Compatible con Termux, Linux y Windows</li>
+  <li>🔗 Vinculación por código de 8 dígitos (sin QR)</li>
+  <li>⚡ Conexión rápida y estable</li>
+  <li>🧩 Arquitectura modular</li>
+  <li>🎨 Creación de stickers</li>
+  <li>📜 Menú interactivo</li>
+  <li>🛠️ Fácil de personalizar</li>
 </ul>
 
 <hr>
 
 <h2>📦 Requisitos</h2>
 <ul>
-  <li>Node.js v18 o superior</li>
+  <li>Node.js <b>v18 o superior</b></li>
   <li>npm</li>
   <li>Número de WhatsApp activo</li>
 </ul>
-
-<p>Verifica tu versión:</p>
 
 <pre>
 node -v
@@ -56,56 +75,58 @@ npm install
 npm install @whiskeysockets/baileys
 </pre>
 
-<h3>4️⃣ Ejecutar el bot</h3>
+<h3>4️⃣ Iniciar el bot</h3>
 <pre>
 node index.js
 </pre>
 
 <hr>
 
-<h2>🔗 Vincular WhatsApp</h2>
+<h2>🔑 Vincular WhatsApp</h2>
 <ol>
-  <li>Ingresa tu número en formato internacional</li>
+  <li>Introduce tu número en formato internacional</li>
   <li>Ejemplo: <b>50761234567</b></li>
-  <li>Se generará un código de 8 dígitos</li>
+  <li>El bot generará un <b>código de 8 dígitos</b></li>
   <li>En WhatsApp:
     <ul>
       <li>Ajustes</li>
       <li>Dispositivos vinculados</li>
       <li>Vincular dispositivo</li>
-      <li>Ingresa el código</li>
+      <li>Ingresar código</li>
     </ul>
   </li>
 </ol>
 
+<p><b>⚠️ Nota:</b> si el código expira, reinicia el bot y genera uno nuevo.</p>
+
 <hr>
 
-<h2>🧾 Comandos disponibles</h2>
+<h2>⌨️ Comandos</h2>
 
-<table border="1" cellpadding="8">
+<table border="1" cellpadding="10" cellspacing="0">
   <tr>
     <th>Comando</th>
     <th>Descripción</th>
   </tr>
   <tr>
-    <td>/menu</td>
-    <td>Muestra el menú de comandos</td>
+    <td><code>/menu</code></td>
+    <td>Muestra el menú principal</td>
   </tr>
   <tr>
-    <td>/ping</td>
-    <td>Comprueba si el bot está activo</td>
+    <td><code>/ping</code></td>
+    <td>Comprueba el estado del bot</td>
   </tr>
   <tr>
-    <td>/sticker</td>
-    <td>Crea un sticker desde imagen o video</td>
+    <td><code>/sticker</code></td>
+    <td>Convierte imagen o video en sticker</td>
   </tr>
   <tr>
-    <td>/info</td>
+    <td><code>/info</code></td>
     <td>Información del bot</td>
   </tr>
   <tr>
-    <td>/help</td>
-    <td>Lista de comandos</td>
+    <td><code>/help</code></td>
+    <td>Lista de ayuda</td>
   </tr>
 </table>
 
@@ -127,33 +148,36 @@ node index.js
 
 <hr>
 
-<h2>🛠️ Tecnologías</h2>
+<h2>🛠️ Tecnologías usadas</h2>
 <ul>
   <li>Node.js</li>
   <li>@whiskeysockets/baileys</li>
-  <li>Pino</li>
+  <li>Pino (logs)</li>
   <li>QRCode-terminal</li>
 </ul>
 
 <hr>
 
-<h2>❗ Errores comunes</h2>
+<h2>🐞 Solución de problemas</h2>
 <ul>
-  <li><b>Error de vinculación:</b> verifica el número y genera un nuevo código</li>
-  <li><b>require no definido:</b> usa <code>import</code> (ES Modules)</li>
+  <li><b>No vincula:</b> revisa el número y genera un nuevo código</li>
+  <li><b>Error require:</b> el proyecto usa ES Modules (<code>import</code>)</li>
+  <li><b>Se queda cargando:</b> elimina la carpeta <code>auth_info</code> y reinicia</li>
 </ul>
 
 <hr>
 
-<h2>📄 Licencia</h2>
+<h2>📜 Licencia</h2>
 <p>
-Proyecto de uso educativo. No afiliado oficialmente a WhatsApp.
+Proyecto con fines educativos.  
+No afiliado ni respaldado por WhatsApp Inc.
 </p>
 
 <hr>
 
-<h2>⭐ Autor</h2>
+<h2>👤 Autor</h2>
 <p>
-Desarrollado por <b>Jafeth Silva</b><br>
-Si te sirve, ¡deja una ⭐ en el repositorio!
+<b>Jafeth Silva</b><br>
+💬 WhatsApp Bot Developer<br>
+⭐ Si te gustó el proyecto, apóyalo con una estrella en GitHub
 </p>
