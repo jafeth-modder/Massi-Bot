@@ -2,7 +2,7 @@
 
 <h1>🤖 WhatsApp Bot con Baileys</h1>
 
-<img src="bot.png" alt="WhatsApp Bot" width="280">
+<img src="bot.jpg" alt="WhatsApp Bot" width="280">
 
 <p>
   Bot de WhatsApp desarrollado en <b>Node.js</b> usando
