@@ -61,8 +61,8 @@ npm -v
 
 <h3>1️⃣ Clonar el repositorio</h3>
 <pre>
-git clone https://github.com/tuusuario/tu-bot.git
-cd tu-bot
+git https://github.com/jafeth-modder/Massi-Bot
+cd Massi-Bot
 </pre>
 
 <h3>2️⃣ Instalar dependencias</h3>
